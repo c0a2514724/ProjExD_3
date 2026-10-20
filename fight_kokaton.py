@@ -128,7 +128,7 @@ class Bomb:
         pg.draw.circle(self.img, color, (rad, rad), rad)
         self.img.set_colorkey((0, 0, 0))
         self.rct = self.img.get_rect()
-        self.rct.center = random.randint(0, WIDTH), random.randint(0, HEIGHT)
+        self.rct.center = random.randint(rad, WIDTH - rad), random.randint(rad, HEIGHT - rad)
         self.vx, self.vy = +5, +5
 
     def update(self, screen: pg.Surface):
